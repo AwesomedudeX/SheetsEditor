@@ -24,4 +24,5 @@ c1, c2, c3, c4, c5, c6 = st.columns(6)
 
 df = pd.read_csv(link)
 
-st.experimental_data_editor(df)
+edf = st.experimental_data_editor(df)
+st.download_button(edf)
