@@ -11,7 +11,6 @@ c1, c2, c3, c4, c5, c6 = st.columns(6)
 	
 method = c1.selectbox("Select input method:", ["local", "hyperlink"])
 link = ""
-mode = st.sidebar.radio("", ["Load/Reset Data", "Editor"])
 
 if method == "local":
 	link = link + st.text_input("Enter .csv file path here:")
@@ -25,4 +24,4 @@ c1, c2, c3, c4, c5, c6 = st.columns(6)
 df = pd.read_csv(link)
 
 edf = st.experimental_data_editor(df)
-st.download_button("Download Data", edf, "car-prices/csv")
+st.download_button("Download Data", edf)
