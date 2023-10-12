@@ -23,4 +23,4 @@ name = st.text_input("File Name:")
 if name[-4:] != ".txt":
 	name = name + ".txt"
 
-st.download_button(label="Download Data as Text", data=str(edf), file_name=".txt", mime="text/plain")
+st.download_button(label="Download Data as Text", data=str(edf), file_name=name, mime="text/plain")
