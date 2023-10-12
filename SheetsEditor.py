@@ -9,13 +9,7 @@ st.sidebar.title("Controls:")
 
 c1, c2, c3, c4, c5, c6 = st.columns(6)
 	
-method = c1.selectbox("Select input method:", ["local", "hyperlink"])
-link = ""
-
-if method == "local":
-	link = link + st.text_input("Enter .csv file path here:")
-elif method == "hyperlink":
-	link = st.text_input("Enter .csv file link here:")
+link = st.text_input("Enter .csv file hyperlink here:")
 
 st.write("\n\n---\n\n")
 
