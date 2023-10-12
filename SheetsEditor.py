@@ -18,4 +18,4 @@ df = pd.read_csv(link)
 edf = st.experimental_data_editor(df)
 path = st.text_input("File Name:")
 
-st.download_button(label="Download Data as Text File", data=edf, file_name="car-prices.txt", mime="text/plain")
+st.download_button(label="Download Data as Text File", data=str(edf), file_name="car-prices.txt", mime="text/plain")
