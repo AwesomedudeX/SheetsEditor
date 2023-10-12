@@ -15,8 +15,12 @@ st.write("\n\n---\n\n")
 c1, c2, c3, c4, c5, c6 = st.columns(6)
 
 df = pd.read_csv(link)
-
 edf = st.experimental_data_editor(df)
+path = st.text_input("Save As:")
 
-if st.download_button("Download Data", df):
-	st.subheader("File Downloaded Successfully!")
+if path[-4:] != ".csv":
+	path = path + ".csv"
+
+file = open(path, "w")
+
+file.write(edf)
