@@ -20,7 +20,7 @@ df = pd.read_csv(link)
 edf = st.experimental_data_editor(df)
 name = st.text_input("File Name:")
 
-if path[-4:] != ".txt":
-	path = path + ".txt"
+if name[-4:] != ".txt":
+	name = name + ".txt"
 
 st.download_button(label="Download Data as Text", data=str(edf), file_name=".txt", mime="text/plain")
