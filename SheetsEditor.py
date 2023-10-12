@@ -21,6 +21,6 @@ path = st.text_input("Save As:")
 if path[-4:] != ".csv":
 	path = path + ".csv"
 
-file = open(path, "w")
-
-file.write(edf)
+if st.button("Download Data"):
+	file = open(path, "w")
+	file.write(edf)
