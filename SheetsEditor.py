@@ -6,6 +6,8 @@ import pandas as pd
 st.set_page_config(layout="wide")
 st.title("Sheets Editor")
 
+pd.set_option(max_rows="display.max_rows", None, max_columns="display.max_columns", None)
+
 c1, c2, c3, c4, c5, c6 = st.columns(6)
 	
 link = st.text_input("Enter .csv file hyperlink here:")
