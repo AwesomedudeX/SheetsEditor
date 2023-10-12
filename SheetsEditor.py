@@ -18,4 +18,6 @@ c1, c2, c3, c4, c5, c6 = st.columns(6)
 df = pd.read_csv(link)
 
 edf = st.experimental_data_editor(df)
-st.download_button("Download Data", edf)
+
+if st.download_button("Download Data", edf):
+	st.subheader("File Downloaded Successfully!")
