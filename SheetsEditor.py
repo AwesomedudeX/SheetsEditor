@@ -18,6 +18,9 @@ c1, c2, c3, c4, c5, c6 = st.columns(6)
 
 df = pd.read_csv(link)
 edf = st.experimental_data_editor(df)
-path = st.text_input("File Name:")
+name = st.text_input("File Name:")
 
-st.download_button(label="Download Data as Text File", data=str(edf), file_name="car-prices.txt", mime="text/plain")
+if path[-4:] != ".txt":
+	path = path + ".txt"
+
+st.download_button(label="Download Data as Text", data=str(edf), file_name=".txt", mime="text/plain")
